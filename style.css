@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./ChatGPT\ Image\ 24\ يناير\ 2026،\ 01_14_45\ م.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 60px;
+  color: orange;
+}
+
+.overlay button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: orange;
+  border: none;
+  font-size: xx-large;
+  cursor: pointer;
+  width: 40vw;
+  text-align: center;
+}
+
+nav {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: orange;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #111;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.item {
+  background: #111;
+  width: 260px;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid orange;
+}
+
+.item span {
+  display: block;
+  margin: 10px 0;
+  color: orange;
+  font-weight: bold;
+}
+
+button {
+  background: orange;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  color: orange;
+}
+.CREP {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60vw;
+}
+.p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

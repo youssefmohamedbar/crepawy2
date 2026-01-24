@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crepawy | Premium Crepes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="overlay">
+        <h1 class="CREP">Crepawy</h1>
+        <p class="p">Premium Crepes Experience 🥞</p>
+        <button onclick="scrollToMenu()">شوف المنيو</button>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#about">عنّا</a>
+      <a href="#menu">المنيو</a>
+      <a href="#features">مميزاتنا</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+
+    <section id="about">
+      <h2>عن Crepawy</h2>
+      <p>
+        Crepawy علامة متخصصة في تقديم الكريب الحلو والمالح بجودة عالية وطعم فاخر
+        يناسب كل الأذواق.
+      </p>
+    </section>
+
+    <section id="features" class="dark">
+      <h2>ليه Crepawy؟</h2>
+      <div class="features">
+        <div>🔥 مكونات فريش</div>
+        <div>⚡ تحضير سريع</div>
+        <div>⭐ جودة عالمية</div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>المنيو</h2>
+      <div class="menu">
+        <div class="item">
+          <h3>Chocolate Crepe</h3>
+          <p>شوكولاتة بلجيكي + موز</p>
+          <span>45 جنيه</span>
+          <button onclick="order('Chocolate Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>Chicken Crepe</h3>
+          <p>فراخ + جبنة موزاريلا</p>
+          <span>65 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>Nutella Mix</h3>
+          <p>نوتيلا + فواكه</p>
+          <span>55 جنيه</span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="dark">
+      <h2>تواصل معنا</h2>
+      <p>📍 مصر : الغربية - مركز السنطة - الجعفرية</p>
+      <p>📞 01090968387</p>
+    </section>
+
+    <footer>Youssef Bar © 2026 Crepawy – All Rights Reserved</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
