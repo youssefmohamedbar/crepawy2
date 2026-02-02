@@ -11,11 +11,11 @@
       <div class="overlay">
         <h1 class="CREP">Crepawy</h1>
         <p class="p">Premium Crepes Experience 🥞</p>
-        <button onclick="scrollToMenu()">شوف المنيو</button>
+        <button class="button2" onclick="scrollToMenu()">شوف المنيو</button>
       </div>
     </header>
 
-    <nav>
+    <nav class="nav1">
       <a href="#about">عنّا</a>
       <a href="#menu">المنيو</a>
       <a href="#features">مميزاتنا</a>
@@ -26,7 +26,7 @@
       <h2>عن Crepawy</h2>
       <p>
         Crepawy علامة متخصصة في تقديم الكريب الحلو والمالح بجودة عالية وطعم فاخر
-        يناسب كل الأذواق.
+        يناسب كل الأذواق.🍔🍕🍟🌭🌮🤩👌🤞
       </p>
     </section>
 
@@ -41,27 +41,375 @@
 
     <section id="menu">
       <h2>المنيو</h2>
+      <nav>
+        <a href="#crep">كريب</a>
+        <a href="#pizza">بيتزا</a>
+        <a href="#burger">برجر</a>
+        <a href="#mixCrepawy">مكس كريباوي</a>
+        <a href="#crepe meats">كريب لحوم</a>
+      </nav>
+      <h1 id="crep">كريب</h1>
+
       <div class="menu">
         <div class="item">
-          <h3>Chocolate Crepe</h3>
-          <p>شوكولاتة بلجيكي + موز</p>
-          <span>45 جنيه</span>
-          <button onclick="order('Chocolate Crepe')">اطلب الآن</button>
+          <h3>كريب بطاطس</h3>
+          <img class="img4" src="./كريب بطاطس.webp" alt="">
+          <span>30 جنيه</span>
+          <button class="button1" onclick="order('Crepe Potatoes')">
+            اطلب الآن
+          </button>
         </div>
 
         <div class="item">
-          <h3>Chicken Crepe</h3>
-          <p>فراخ + جبنة موزاريلا</p>
-          <span>65 جنيه</span>
+          <h3>كريب بانيه</h3>
+          <img class="img4" src="./كريب بانيه.jpg" alt="">
+          <span>40 جنيه</span>
+          <button onclick="order('Crepe Pane')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب استربس</h3>
+          <img class="img4" src="./استربس.PNG" alt="">
+          <span>55 جنيه</span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب استربس + بطاطس</h3>
+          <img class="img4" src="./images (1).jfif" alt="">
+          <span>55 جنيه</span>
           <button onclick="order('Chicken Crepe')">اطلب الآن</button>
         </div>
 
         <div class="item">
-          <h3>Nutella Mix</h3>
-          <p>نوتيلا + فواكه</p>
+          <h3>كريب زنجر</h3>
+          <img class="img4" src="./كريب زنجر.webp" alt="">
+          <span>55 جنيه</span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>كريب ايطاليانو</h3>
+          <img class="img4" src="./ايطاليانو.PNG" alt="">
+          <span>55 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب كوردن بلو</h3>
+          <img class="img4" src="./كوردن بلو.jfif" alt="">
           <span>55 جنيه</span>
           <button onclick="order('Nutella Mix')">اطلب الآن</button>
         </div>
+
+        <div class="item">
+          <h3>كريب كريسبي</h3>
+          <img class="img4" src="./كريسبي.jfif" alt="">
+          <span>40 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب سوبر كرانشي</h3>
+          <img class="img4" src="./سوبر كرانشي.jfif" alt="">
+          <span>55 جنيه</span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>كريب مكس جبن</h3>
+          <img class="img4" src="./ميكس جبن.jpg" alt="">
+          <span>35 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب برجر</h3>
+          <img class="img4" src="./كريب برجر.jfif" alt="">
+          <span>40 جنيه</span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب شاورما فراخ</h3>
+          <img class="img4" src="./كريب شاورما فراخ.jpg" alt="">
+          <span>55 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب فاهيتا فراخ</h3>
+          <img class="img4" src="./كريب فاهيتا فراخ.jpg" alt="">
+          <span>55 جنيه</span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>كريب شيش طاووق</h3>
+          <img class="img4" src="./كريب شيش طاووق.jfif" alt="">
+          <span>55 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب بطاطس + بانيه</h3>
+          <img class="img4" src="./images.jfif" alt="">
+          <span>35 جنيه</span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب بطاطس + استربس</h3>
+          <img class="img4" src="./استربس + بطاطس.jfif" alt="">
+          <span>40 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+      </div>
+
+      <h1 id="pizza">بيتزا</h1>
+      <div class="menu">
+        <div class="item">
+          <h3>بيتزا مارجريتا</h3>
+          <img class="img4" src="./بيتزا مارجريتا.jpg" alt="">
+          <span>S:60 M:70 L:80 </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا خضراوات</h3>
+          <img class="img4" src="./بيتزا خضراوات.jpg" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا مكس جبن</h3>
+          <img class="img4" src="./بيتزا مكس جبن.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا شاورما فراخ</h3>
+          <img class="img4" src="./بيتزا شاورما فراخ.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا تشيكن استربس</h3>
+          <img class="img4" src="./بيتزا تشيكن ستربس.jfif" alt="">
+          <span>S:60 M:70 L:80 </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا تشيكن باربكيو</h3>
+          <img class="img4" src="./بيتزا تشيكن باربكيو.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا مكس كريباوي</h3>
+          <img class="img4" src="./بيتزا مكس كريباوي.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا لحم مفروم</h3>
+          <img class="img4" src="./بيتزا باللحمه المفرومه.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا سجق</h3>
+          <img class="img4" src="./بيتزا بالسجق.jfif" alt="">
+          <span>S:60 M:70 L:80 </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا شاورما لحمة</h3>
+          <img class="img4" src="./بيتزا شاورما لحمه.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا هوت دوج</h3>
+          <img class="img4" src="./بيتزا هوت دوج.jpeg" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا جمبري</h3>
+          <img class="img4" src="./بيتزا بالجمبري.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا سي فود</h3>
+           <img class="img4" src="./بيتزا سي فود.jfif" alt="">
+          <span>S:60 M:70 L:80 </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا رانش</h3>
+          <img class="img4" src="./بيتزا رانش.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا بيروني</h3>
+          <img class="img4" src="./بيتزا بيبروني.jfif" alt="">
+          <span>S:60 M:75 L:90 </span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+      </div>
+
+      <h1 id="burger">برجر</h1>
+
+      <div class="menu">
+        <div class="item">
+          <h3>برجر لحم</h3>
+          <img class="img4" src="./برجر لحم.jfif" alt="">
+          <span>سنجل :  50 ,,  دبل : 65 </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>برجر دجاج</h3>
+          <img class="img4" src="./برجر دجاج.jfif" alt="">
+          <span>سنجل : 50  ,,  دبل : 65 </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>تشيكن رانشي</h3>
+          <img class="img4" src="./برجر رانشي.jfif" alt="">
+          <span>سنجل : 55  ,,  دبل : 70 </span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+      </div>
+
+      <h1 id="mixCrepawy">مكس كريباوي</h1>
+
+      <div class="menu">
+        <div class="item">
+          <h3>كريب الطاقة</h3>
+          <img class="img4" src="./كريب الطاقة.jfif" alt="">
+          <span>65 جنيه</span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>كريب الهامر</h3>
+          <img class="img4" src="./كريب مكس فراخ.jpg" alt="">
+          <span>55 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب الصاروخ</h3>
+          <img class="img4" src="./كريب صاروخ.jfif" alt="">
+          <span>55 جنيه</span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب مكس فراخ</h3>
+          <img class="img4" src="./مكس فراخ.jfif" alt="">
+          <span>60 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب مكس لحوم</h3>
+          <img class="img4" src="./كريب مكس لحوم.jfif" alt="">
+          <span>60 جنيه</span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>كريب الغول</h3>
+          <img class="img4" src="./الغول.jfif" alt="">
+          <span>75 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+        </div>
+
+
+              <h1 id="crepe meats">كريب لحوم</h1>
+      <div class="menu">
+        <div class="item">
+          <h3>شاورما لحمة</h3>
+          <img class="img4" src="./كريب شاورما لحمه 2.jfif" alt="">
+          <span>60 جنيه </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+
+        <div class="item">
+          <h3>لحم مفروم</h3>
+          <img class="img4" src="./كريب لحمه مفرومه.jpg" alt="">
+          <span>50 جنيه</span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كفتة مشوية</h3>
+          <img class="img4" src="./كريب بالكفتة.jpg" alt="">
+          <span>50 جنيه </span>
+          <button onclick="order('Nutella Mix')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>سجق اسكندراني</h3>
+          <img class="img4" src="./كريب سجق اسكندراني.jpg" alt="">
+          <span>50 جنيه </span>
+          <button onclick="order('Chicken Crepe')">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>هوت دوج</h3>
+          <img class="img4" src="./كريب هوت دوج.jfif" alt="">
+          <span>35 جنيه </span>
+          <button class="button1" onclick="order('Chocolate Crepe')">
+            اطلب الآن
+          </button>
+        </div>
+        </div>
+
+
+
       </div>
     </section>
 
@@ -71,7 +419,10 @@
       <p>📞 01090968387</p>
     </section>
 
-    <footer>Youssef Bar © 2026 Crepawy – All Rights Reserved</footer>
+    <footer>
+      Youssef Bar © 2026 Crepawy – All Rights Reserved
+      <p>Made by <a href="">Youssef Bar</a></p>
+    </footer>
 
     <script src="script.js"></script>
   </body>

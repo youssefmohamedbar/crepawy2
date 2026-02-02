@@ -2,6 +2,26 @@
   box-sizing: border-box;
 }
 
+.nav1 :hover {
+  color: #fff;
+}
+
+.button2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#pizza,
+#crepe {
+  color: rgb(233, 99, 22);
+}
+
+#mixCrepawy,
+#burger .nav1 {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -85,6 +105,9 @@ section {
   padding: 25px;
   border-radius: 12px;
   border: 1px solid orange;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .item span {
@@ -92,6 +115,29 @@ section {
   margin: 10px 0;
   color: orange;
   font-weight: bold;
+}
+
+.img2 {
+  width: 150px;
+  border-radius: 7px;
+}
+
+.img3 {
+  width: 167px;
+  border-radius: 7px;
+  height: 110px;
+}
+
+.img4 {
+  width: 150px;
+  border-radius: 7px;
+  height: 125px;
+}
+
+.item :hover {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 button {
@@ -115,4 +161,7 @@ footer {
 }
 .p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+::selection {
 }
