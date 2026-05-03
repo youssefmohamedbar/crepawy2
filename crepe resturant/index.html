@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crepawy | Premium Crepes</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="overlay">
+        <h1 class="logo">Crepawy</h1>
+        <p>Premium Crepes Experience 🥞</p>
+        <button onclick="scrollToMenu()">شوف المنيو</button>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#about">عنّا</a>
+      <a href="#menu">المنيو</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+
+    <section id="about">
+      <h2>عن Crepawy</h2>
+      <p>
+        Crepawy علامة متخصصة في تقديم الكريب الحلو والمالح بجودة عالية وطعم فاخر
+        يناسب كل الأذواق.
+      </p>
+    </section>
+
+    <section id="menu">
+      <h2>المنيو</h2>
+
+      <div class="menu">
+        <div class="item">
+          <h3>كريب بطاطس</h3>
+          <span>30 جنيه</span>
+          <button onclick="addToCart('كريب بطاطس', 30)">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب بانيه</h3>
+          <span>40 جنيه</span>
+          <button onclick="addToCart('كريب بانيه', 40)">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>كريب زنجر</h3>
+          <span>55 جنيه</span>
+          <button onclick="addToCart('كريب زنجر', 55)">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>بيتزا مارجريتا</h3>
+          <span>70 جنيه</span>
+          <button onclick="addToCart('بيتزا مارجريتا', 70)">اطلب الآن</button>
+        </div>
+
+        <div class="item">
+          <h3>برجر لحم</h3>
+          <span>50 جنيه</span>
+          <button onclick="addToCart('برجر لحم', 50)">اطلب الآن</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART -->
+    <section class="cartBox">
+      <h2>🛒 سلة الطلبات</h2>
+
+      <div id="cartItems"></div>
+      <h3 id="totalPrice">الإجمالي: 0 جنيه</h3>
+
+      <input id="customerName" placeholder="اسم العميل" />
+      <input id="customerPhone" placeholder="رقم الهاتف" />
+      <input id="customerAddress" placeholder="العنوان" />
+
+      <select id="deliveryType">
+        <option value="استلام من الفرع">استلام من الفرع</option>
+        <option value="توصيل للمنزل">توصيل للمنزل</option>
+      </select>
+
+      <button onclick="checkout()">تأكيد الطلب</button>
+    </section>
+
+    <section id="invoice" class="hidden">
+      <h2>🧾 الفاتورة</h2>
+      <table id="invoiceTable"></table>
+      <div id="qrcode"></div>
+      <button onclick="window.print()">🖨️ طباعة</button>
+    </section>
+
+    <section id="contact">
+      <h2>تواصل معنا</h2>
+      <p>📞 01090968387</p>
+      <p>📍 الغربية - السنطة - الجعفرية</p>
+    </section>
+
+    <footer>Youssef Bar © 2026 Crepawy – All Rights Reserved</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

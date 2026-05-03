@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.hero {
+  height: 80vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1604908177522-04046f9a7b8b");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  font-size: 60px;
+  color: orange;
+}
+
+button {
+  background: orange;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px orange;
+}
+
+nav {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: orange;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  background: #111;
+  border: 1px solid orange;
+  padding: 20px;
+  width: 220px;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px orange;
+}
+
+.item span {
+  display: block;
+  margin: 10px 0;
+  color: orange;
+}
+
+.cartBox {
+  background: #111;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+td,
+th {
+  border: 1px solid orange;
+  padding: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background: black;
+  padding: 20px;
+  text-align: center;
+  color: orange;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero {
+    height: 60vh;
+  }
+}

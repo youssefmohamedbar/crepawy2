@@ -1,45 +1,8 @@
-function order(item) {
-  alert("✔️ تم إضافة " + item + " إلى طلبك");
-}
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function scrollToMenu() {
-  document.getElementById("menu").scrollIntoView({
-    behavior: "smooth",
-  });
+  document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
 }
-
-const orders = JSON.parse(localStorage.getItem("orders")) || [];
-const table = document.getElementById("ordersTable");
-
-table.innerHTML = `
-
-<tr>
-<th>ID</th>
-<th>العميل</th>
-<th>الهاتف</th>
-<th>الأصناف</th>
-<th>الإجمالي</th>
-<th>التوصيل</th>
-<th>التاريخ</th>
-</tr>`;
-
-orders.forEach((o) => {
-  const items = o.items.map((i) => `${i.name} x${i.qty}`).join(" , ");
-
-  table.innerHTML += `
-
-<tr>
-<td>${o.id}</td>
-<td>${o.name}</td>
-<td>${o.phone}</td>
-<td>${items}</td>
-<td>${o.total} جنيه</td>
-<td>${o.delivery}</td>
-<td>${o.date}</td>
-</tr>`;
-});
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price) {
   const existing = cart.find((i) => i.name === name);
@@ -57,19 +20,19 @@ function addToCart(name, price) {
 function renderCart() {
   const div = document.getElementById("cartItems");
   const totalBox = document.getElementById("totalPrice");
-  div.innerHTML = "";
 
+  div.innerHTML = "";
   let total = 0;
 
-  cart.forEach((i, index) => {
-    total += i.price * i.qty;
+  cart.forEach((item, index) => {
+    total += item.price * item.qty;
 
     div.innerHTML += `
-
 <p>
-${i.name} × ${i.qty} = ${i.price * i.qty} جنيه
+${item.name} × ${item.qty} = ${item.price * item.qty} جنيه
 <button onclick="removeItem(${index})">❌</button>
-</p>`;
+</p>
+`;
   });
 
   totalBox.innerText = "الإجمالي: " + total + " جنيه";
@@ -107,6 +70,7 @@ function checkout() {
   });
 
   table.innerHTML += `<tr><td colspan="2">الإجمالي</td><td>${total}</td></tr>`;
+
   document.getElementById("invoice").classList.remove("hidden");
 
   document.getElementById("qrcode").innerHTML = "";
@@ -119,32 +83,9 @@ function checkout() {
     height: 120,
   });
 
-  saveOrder(name, phone, address, delivery, total, cart);
-
   cart = [];
   localStorage.removeItem("cart");
   renderCart();
-}
-
-function saveOrder(name, phone, address, delivery, total, items) {
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
-
-  orders.push({
-    id: Date.now(),
-    name,
-    phone,
-    address,
-    delivery,
-    total,
-    items,
-    date: new Date().toLocaleString(),
-  });
-
-  localStorage.setItem("orders", JSON.stringify(orders));
-}
-
-function scrollToMenu() {
-  document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
 }
 
 renderCart();

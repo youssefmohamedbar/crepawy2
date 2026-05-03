@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crepawy | Premium Crepes</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Crepawy</div>
+
+      <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#menu">المنيو</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+
+      <div class="cart-btn" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>أفضل كريب في مصر 🔥</h1>
+        <p>طعم عالمي – جودة لا تُقاوم</p>
+        <button onclick="scrollToMenu()">اطلب الآن</button>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <h2>المنيو</h2>
+
+      <div class="controls">
+        <input
+          type="text"
+          id="search"
+          placeholder="ابحث..."
+          onkeyup="renderMenu()"
+        />
+        <select id="filter" onchange="renderMenu()">
+          <option value="all">كل الأصناف</option>
+          <option value="savory">كريب حادق</option>
+          <option value="sweet">كريب حلو</option>
+        </select>
+      </div>
+
+      <div class="menu-grid" id="menu-container"></div>
+    </section>
+
+    <!-- CART -->
+    <div class="cart-panel" id="cart-panel">
+      <h3>سلة الطلبات</h3>
+      <div id="cart-items"></div>
+      <h4 id="cart-total">الإجمالي: 0 جنيه</h4>
+      <button onclick="openCheckout()">إتمام الطلب</button>
+    </div>
+
+    <!-- CHECKOUT -->
+    <div class="checkout-modal" id="checkout-modal">
+      <div class="checkout-box">
+        <h3>بيانات العميل</h3>
+        <input type="text" id="name" placeholder="الاسم" />
+        <input type="text" id="phone" placeholder="رقم الهاتف" />
+        <input type="text" id="address" placeholder="العنوان" />
+        <button onclick="submitOrder()">تأكيد الطلب</button>
+        <button class="close" onclick="closeCheckout()">إغلاق</button>
+      </div>
+    </div>
+
+    <footer id="contact">
+      <p>© 2026 Crepawy - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crepawy | Premium Crepes</title>
+    <link rel="icon" type="image/x-icon" href="./crepawy icon.PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="overlay">
+        <h1 class="CREP">Crepawy</h1>
+        <p class="p">أفضل تجربة كريب في مصر 🥞🍕🍔🍟🌭</p>
+        <button class="button2" onclick="scrollToMenu()">شوف المنيو</button>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav1">
+      <a href="#about">عنّا</a>
+      <a href="#menu">المنيو</a>
+      <a href="#features">مميزاتنا</a>
+      <a href="#contact">تواصل</a>
+      <a href="#store">🛒 سلة الطلبات</a>
+
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="sectionReveal">
+      <h2>عن Crepawy</h2>
+      <p>
+        Crepawy تقدم الكريب الحلو والمالح، البرجر، البيتزا، المكرونات والفطائر
+        بأعلى جودة وطعم يجنن 
+             و أيضا   Crepawy علامة متخصصة في تقديم الكريب الحلو والمالح بجودة عالية وطعم فاخر
+        يناسب كل الأذواق.🍔🍕🍟🌭🌮🤩👌🤞🍔🍕🥞
+
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="dark sectionReveal">
+      <h2>ليه Crepawy؟</h2>
+      <div class="features">
+        <div>🔥 مكونات طازجة</div>
+        <div>⚡ تحضير سريع</div>
+        <div>⭐ جودة عالمية</div>
+        <div>🍴 خدمة ممتازة</div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="sectionReveal">
+      <h2>المنيو</h2>
+
+      <nav class="menu-nav">
+        <a href="#crep">كريب</a>
+        <a href="#pizza">بيتزا</a>
+        <a href="#burger">برجر</a>
+        <a href="#mixCrepawy">مكس كريباوي</a>
+        <a href="#crepeMeats">كريب لحوم</a>
+        <a href="#canelony">كانيلوني</a>
+        <a href="#Meals & Rizo">ريزو & وجبات</a>
+        <a href="#roll">رول</a>
+        <a href="#Pies">فطائر</a>
+        <a href="#Pasta">مكرونات</a>
+        <a href="#Additions">إضافات</a>
+
+      </nav>
+
+      <!-- Menu Items -->
+
+      <!-- 1- كريب -->
+      <div class="menu-container">
+        <h1 id="crep">كريب</h1>
+        <br>
+        <div class="menu">
+          <div class="item">
+            <h3>كريب بطاطس</h3>
+            <img src="https://www.khalty.net/cdn/shop/files/9634486041715710528_600x.webp?v=1745697656" alt="" />
+            <span>30 جنيه</span>
+            <button onclick="addToCart('كريب بطاطس', 30)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب بانيه</h3>
+            <img src="https://www.darelhilal.com/Media/News/2021/10/1/2021-637687215939573957-957.jpg" alt="" />
+            <span>40 جنيه</span>
+            <button onclick="addToCart('كريب بانيه', 40)">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>كريب استربس</h3>
+            <img src="data:image/jpeg;base64,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" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب استربس', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب استربس + بطاطس</h3>
+            <img src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/a3fd9bbb-3c66-49ba-b472-0a4748c114a2.jpg" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب استربس + بطاطس', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب زنجر</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPgqIwITNIJwEqtChZJ81M9lvZPpAUVk9TFQ&s" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب زنجر', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب ايطاليانو</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCOUSi0un3niNL_AnG0e4SF03SpWtSyr7aVw&s" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب ايطاليانو', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب كوردن بلو</h3>
+            <img src="https://hero-food.com/public/uploads/all/pAtp9qT1fkPZAe3Jg2UOHS1Lx1Uyu4cSaBSYU9t0.jpg" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب كوردن بلو', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب كريسبي</h3>
+            <img src="https://hero-food.com/public/uploads/all/l4gGHnGRctnSjdVqRpoJ0apKb3SBj79rll38Jau5.jpg" alt="" />
+            <span>40 جنيه</span>
+            <button onclick="addToCart('كريب كريسبي', 40)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب سوبر كرانشي</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3lGpk8CiRK3qbkDZA9LJM7BFY8zPFULFkw&s" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب سوبر كرانشي', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب مكس جبن</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzhR95psqbrkH0_4Ke6_JQB_fhAcKJHNkKnw&s" alt="" />
+            <span>40 جنيه</span>
+            <button onclick="addToCart('كريب مكس جبن', 35)">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>كريب برجر</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuhCJiaBNeEQ8BjLxq5QnH3rOXV1fbP6JXQ&s" alt="" />
+            <span>50 جنيه</span>
+            <button onclick="addToCart('كريب برجر', 40)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب شاورما فراخ</h3>
+            <img src="https://www.cairo24.com/Upload/libfiles/111/3/964.jpg" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب شاورما فراخ', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب فاهيتا فراخ</h3>
+            <img src="https://hero-food.com/public/uploads/all/WTA7S3Uu3QbQE1uPX8i9gJ27w5U3XleNT6Wgawck.jpg" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب فاهيتا فراخ', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب شيش طاووق</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVBmyl33eKSI9js5Kb6RxC-WBpO4ey3eqB9w&s" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب شيش طاووق', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب بطاطس + بانيه</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2py_keTWl18bhhM7V0TZvvDLso0lEXXwl6g&s" alt="" />
+            <span>35 جنيه</span>
+            <button onclick="addToCart('كريب بطاطس + بانيه', 35)">اطلب الآن</button>
+          </div>
+
+          <div class="item">
+            <h3>كريب بطاطس + استربس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQX01XfA0p60nmpS73A5GE6T2Z_bP1atcUVw&s" alt="" />
+            <span>40 جنيه</span>
+            <button onclick="addToCart('كريب بطاطس + استربس', 40)">اطلب الآن</button>
+          </div>
+
+          <div class="item">
+            <h3>كريب جمبري مشوي</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR1rf_U95tw5yhdHWDMdnTFh6Hyd6Qdj1a6Q&s" alt="" />
+            <span>75 جنيه</span>
+            <button onclick="addToCart('كريب جمبري مشوي', 75)">اطلب الآن</button>
+          </div>
+
+                    <div class="item">
+            <h3>كريب سي فود</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeen24u7eVfWE-XWeBQIYLFp_MIH81tCPZiA&s" alt="" />
+            <span>90 جنيه</span>
+            <button onclick="addToCart('كريب سي فود', 90)">اطلب الآن</button>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <!-- 2- بيتزا -->
+      <div class="menu-container">
+        <h1 id="pizza">بيتزا</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>بيتزا مارجريتا</h3>
+            <img src="https://shamlola.s3.amazonaws.com/Shamlola_Images/8/src/3452c8720013eddbccdb4d72c81bb2a3b31138e8.jpg" alt="" />
+          <span>S:70 M:80 L:90 </span>
+            <button onclick="addToCart('بيتزا مارجريتا')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا خضراوات</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUB9HzaRZII88EJVgY3y6XK6AFgXRaLC7k9w&s" alt="" />
+          <span>S:75 M:85 L:95 </span>
+            <button onclick="addToCart('بيتزا خضراوات')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا مكس جبن</h3>
+            <img src="https://hero-food.com/public/uploads/all/Qn1bWYZ1bQ2Akukt8mr79xPGpoj3Z3K4CE52fF76.jpg" alt="" />
+          <span>S:75 M:90 L:100 </span>
+            <button onclick="addToCart('بيتزا مكس جبن')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا شاورما فراخ</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkMNXEAoqkUnLR7rqXS429Wc-3DuU3gw3JA&s" alt="" />
+          <span>S:75 M:95 L:120 </span>
+            <button onclick="addToCart('بيتزا شاورما فراخ')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا تشيكن استربس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVkfWX80GSbmSDP1mSoyQJGQKh_E9PU8P5g&s" alt="" />
+          <span>S:75 M:95 L:120 </span>
+            <button onclick="addToCart('بيتزا تشيكن استربس')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا تشيكن باربكيو</h3>
+            <img src="https://majesty.com.eg/wp-content/uploads/2024/01/%D8%AF%D8%AC%D8%A7%D8%AC-%D8%A8%D8%A7%D8%B1%D8%A8%D9%83%D9%8A%D9%88.png" alt="" />
+          <span>S:80 M:100 L:130 </span>
+            <button onclick="addToCart('بيتزا تشيكن باربكيو')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا ميكس كريباوي</h3>
+            <img src="https://pbs.twimg.com/media/AgJR0uLCAAEdNlH.jpg" alt="" />
+          <span>S:80 M:100 L:130 </span>
+            <button onclick="addToCart('بيتزا ميكس كريباوي')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا لحم مفروم</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTUFhtLyKK_e7Tq0WWqIP2EDXJWKvFRXcl2g&s" alt="" />
+          <span>S:75 M:95 L:120 </span>
+            <button onclick="addToCart('بيتزا لحم مفروم')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا سجق</h3>
+            <img src="https://www.cairo24.com/UploadCache/libfiles/92/4/600x338o/582.jpg" alt="" />
+          <span>S:75 M:95 L:120 </span>
+            <button onclick="addToCart('بيتزا سجق')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا شاورما لحمة</h3>
+            <img src="https://images.alwatanvoice.com/news/large/9999179383.jpg" alt="" />
+          <span>S:75 M:95 L:120 </span>
+            <button onclick="addToCart('بيتزا شاورما لحمه')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا هوت دوج</h3>
+            <img src="https://kisspizzacafe.com/cdn/shop/products/Picsart_22-09-05_10-29-50-369_b9ae5a6b-c20e-4446-94a2-d8fe2c6e481a.jpg?v=1676648535" alt="" />
+          <span>S:75 M:95 L:120 </span>
+            <button onclick="addToCart('بيتزا هوت دوج')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا جمبري</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0bCUPhTvlYm7s6tDuxB-VPQ0gn9VOOZu-1Q&s" alt="" />
+          <span>S:80 M:110 L:150 </span>
+            <button onclick="addToCart('بيتزا جمبري')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا سي فود</h3>
+            <img src="https://www.elmogaz.com/UploadCache/libfiles/74/7/800x450o/415.jpg" alt="" />
+          <span>S:90 M:120 L:160 </span>
+            <button onclick="addToCart('بيتزا سي فود')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا رانش</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbP8YnzWLarwHcz6V-soKYh_vmt1A-sUeGmQ&s" alt="" />
+          <span>S:80 M:110 L:130 </span>
+            <button onclick="addToCart('بيتزا رانش')">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>بيتزا بيبروني</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3z-5f8gAOf1IfLBXB2kO2poNwMN4Rfof91Q&s" alt="" />
+          <span>S:80 M:110 L:130 </span>
+            <button onclick="addToCart('بيتزا بيبروني')">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3- برجر -->
+      <div class="menu-container">
+        <h1 id="burger">برجر</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>برجر لحم</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0RqCgKdTrN3PP8w_e2tQ5Blb5db3eqmrCHg&s" alt="" />
+          <span>سنجل :  60 ,,  دبل : 80 </span>
+            <button onclick="addToCart('برجر لحم', 60 , 80)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>برجر دجاج</h3>
+            <img src="https://www.dietcafe.com.qa/wp-content/uploads/2021/08/Savory-Grilled-Chicken-burger.jpg" alt="" />
+          <span>سنجل : 60  ,,  دبل : 80 </span>
+            <button onclick="addToCart('برجر دجاج', 50 , 65)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>برجر تشيكن رانشي</h3>
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_t3Z1pQtxzm35qN1FyjwWXJ8mihwKBzKWxQ&s" alt="" />
+          <span>سنجل : 65  ,,  دبل : 85 </span>
+            <button onclick="addToCart('برجر تشيكن رانشي', 55 , 70)">اطلب الآن</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4- مكس كريباوي -->
+      <div class="menu-container">
+        <h1 id="mixCrepawy">مكس كريباوي</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+          <h3>كريب الطاقة</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_qqG3qF9rnlcDFbpi1UE4m0K7zUJuggP2Q&s" alt="" />
+            <span>75 جنيه</span>
+            <button onclick="addToCart('كريب الطاقة', 75)">
+              اطلب الآن
+            </button>
+          </div>
+          <div class="item">
+          <h3>كريب الصاروخ</h3>
+            <img src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e47e2e0b-0da3-4e13-9aac-ab62df4aac52.jpg" alt="" />
+            <span>60 جنيه</span>
+            <button onclick="addToCart('كريب الصاروخ', 60)">
+              اطلب الآن
+            </button>
+          </div>
+
+                    <div class="item">
+          <h3>كريب ميكس فراخ</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcazVsxotA-vhBcPSyGrSCAA_8UHY-UmOM9g&s" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('كريب ميكس فراخ', 70)">
+              اطلب الآن
+            </button>
+          </div>
+          <div class="item">
+          <h3>كريب ميكس لحوم</h3>
+            <img src="https://images.deliveryhero.io/image/talabat/MenuItems/Mix_meat_crepe638550140050599713.jpg" alt="" />
+            <span>65 جنيه</span>
+            <button onclick="addToCart('كريب ميكس لحوم', 65)">
+              اطلب الآن
+            </button>
+          </div>
+          <div class="item">
+          <h3>كريب الغول</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRPeKGVdxAxkkmrS7UepQLvxLwhqZvQ75-aA&s" alt="" />
+            <span>85 جنيه</span>
+            <button onclick="addToCart('كريب الغول', 85)">
+              اطلب الآن
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5- كريب لحوم -->
+      <div class="menu-container">
+        <h1 id="crepeMeats">كريب لحوم</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>كريب لحم مفروم</h3>
+            <img src="https://images.akhbarelyom.com//images/images/medium/20191031082351613.jpg" alt="" />
+            <span>55 جنيه</span>
+            <button onclick="addToCart('كريب لحم مفروم', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب سجق اسكندراني</h3>
+            <img src="https://api.cezma.cloud/storage/thumbnails/products/web/1716418310image.jpg" alt="" />
+            <span>55 جنيه</span>
+            <button onclick="addToCart('كريب سجق', 55)">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>كريب شاورما لحمة</h3>
+            <img src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/fe9997a6-7909-46c2-91e6-7853845d9150.jpg" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('كريب شاورما لحمة', 70)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب كفتة مشوية</h3>
+            <img src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/d98aec38-4e0e-4f23-aa5a-5418970daf3f.jpg" alt="" />
+            <span>55 جنيه</span>
+            <button onclick="addToCart('كريب كفتة مشوية', 55)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كريب هوت دوج</h3>
+            <img src="data:image/jpeg;base64,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" alt="" />
+            <span>50 جنيه</span>
+            <button onclick="addToCart('كريب هوت دوج', 50)">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- 7- كانيلوني -->
+      <div class="menu-container">
+        <h1 id="canelony">كانيلوني</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>كانيلوني فراخ</h3>
+            <img src="https://bmzag.com/cdn/shop/products/1cdd13690d1c3c68af6f63062841b1a7.jpg?v=1671617623" alt="" />
+            <span>M : 70  L : 80 </span>
+            <button onclick="addToCart('كانيلوني فراخ')">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>كانيلوني لحمة</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCFoeCSYUzZrWWMqWz7OwLZXmptNJpRE_NvA&s" alt="" />
+            <span>M : 70  L : 80 </span>
+            <button onclick="addToCart('كانيلوني لحمة')">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>كانيلوني مكس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSbRh2KJMuNrWiVX3vQ8VDgEqNZrbAylQtmQ&s" alt="" />
+            <span>M : 75  L : 85 </span>
+            <button onclick="addToCart('كانيلوني مكس')">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ريزو & وجبات-->
+             <div class="menu-container">
+        <h1 id="Meals & Rizo">ريزو & وجبات</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+          <h3>ريزو ستربس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkgUw-ejhacvXHYtLeuHHKNsACAi2_ptxeBw&s" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('ريزو ستربس', 70)">
+              اطلب الآن
+            </button>
+          </div>
+          <div class="item">
+          <h3>ريزو شيش</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpLuITrmd_rt6JRPQxFbUHwsDm_Pv3W4frw&s" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('ريزو شيش', 70)">
+              اطلب الآن
+            </button>
+          </div>
+
+                    <div class="item">
+          <h3>ريزو ميكس</h3>
+            <img src="https://images.deliveryhero.io/image/talabat/MenuItems/%D8%B3%D9%88%D8%A8%D8%B1_%D8%B1%D9%8A%D8%B2%D9%88_%D9%85%D9%83%D8%B3638416293612411242.jpg" alt="" />
+            <span>80 جنيه</span>
+            <button onclick="addToCart('ريزو ميكس', 80)">
+              اطلب الآن
+            </button>
+          </div>
+          <div class="item">
+          <h3>وجبة ستربس</h3>
+            <img src="https://img-global.cpcdn.com/recipes/e728a3f1bbc175fd/680x781cq80/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-%D9%84%D9%88%D8%B5%D9%81%D8%A9%D9%88%D8%AC%D8%A8%D9%87-%D8%B3%D8%AA%D8%B1%D8%A8%D8%B3-%D9%85%D8%B9-%D8%A7%D8%B1%D8%B2-%D8%A7%D9%84%D8%B1%D9%8A%D8%B2%D9%88-%D8%A7%D9%86%D9%85%D8%A7-%D8%A7%D9%8A%D9%87-%D9%81%D9%8A-%D9%82%D9%84%D8%A8%D9%83.jpg" alt="" />
+            <span>120 جنيه</span>
+            <button onclick="addToCart('وجبة سترربس', 120)">
+              اطلب الآن
+            </button>
+          </div>
+                    <div class="item">
+          <h3>وجبة كفتة</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA5eOr3d4kHbn9b6wgttg92w2nyLiH6rhVhQ&s" alt="" />
+            <span>120 جنيه</span>
+            <button onclick="addToCart('وجبة كفتة', 120)">
+              اطلب الآن
+            </button>
+          </div>
+
+          <div class="item">
+          <h3>وجبة ميكس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZK3YKoPQyJUm1WVXlqgSvPGdCYirx-FIc4Q&s" alt="" />
+            <span>140 جنيه</span>
+            <button onclick="addToCart('وجبة ميكس', 140)">
+              اطلب الآن
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 8- رول -->
+      <div class="menu-container">
+        <h1 id="roll">رول</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>رول بطاطس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHITamd5rxd-ym0TGNXZHCdl2W-Ys-fyIbGA&s" alt="" />
+            <span>30 جنيه</span>
+            <button onclick="addToCart('رول بطاطس', 30)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>رول ستربس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0uqn5MZNjd6d_vgRi6sEAm-4VIit29fXwQ&s" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('رول ستربس', 70)">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>رول شاورما فراخ</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo5cD2B_db8MWqzN78x1NUq6PUNfnCmJE68Q&s" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('رول شاورما فراخ', 70)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>رول ميكس</h3>
+            <img src="https://theovenchef.com/wp-content/uploads/2023/12/HAR07488-scaled-e1702277987836-300x300.jpg" alt="" />
+            <span>75 جنيه</span>
+            <button onclick="addToCart('رول ميكس', 75)">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 9- فطائر -->
+      <div class="menu-container">
+        <h1 id="Pies">فطائر</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>فطيرة شيكولاته نوتيلا</h3>
+            <img src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/cd9eb51f-9292-4ded-a0cf-3bd912505eeb.jpg" alt="" />
+            <span>30 جنيه</span>
+            <button onclick="addToCart('فطيرة شيكولاته نوتيلا', 30)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>فطيرة حلاوة قشطة</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVVbQP-Ajl65GjfH26O66zotHqn5EjBnlR0A&s" alt="" />
+            <span>30 جنيه</span>
+            <button onclick="addToCart('فطيرة حلاوة قشطة', 30)">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>فطيرة ستربس</h3>
+            <img src="https://papai.online/wp-content/uploads/2024/11/%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%A8%D8%AF%D9%88%D9%86-%D8%B9%D9%86%D9%88%D8%A7%D9%86-71.png" alt="" />
+            <span>65 جنيه</span>
+            <button onclick="addToCart('فطيرة ستربس', 65)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>فطيرة شاورما فراخ</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy2b8u8IfaSIdjhyI8K232Tcjqllm8uz-nSw&s" alt="" />
+            <span>65 جنيه</span>
+            <button onclick="addToCart('فطيرة شاورما فراخ', 65)">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>فطيرة ميكس كريباوي</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUa5ZHOT5XjpRp8_oedVAnkDMSzhIqCJYbqQ&s" alt="" />
+            <span>70 جنيه</span>
+            <button onclick="addToCart('فطيرة ميكس كريباوي', 70)">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 10- مكرونات -->
+      <div class="menu-container">
+        <h1 id="Pasta">مكرونات</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>نجرسكو فراخ</h3>
+            <img src="https://emofly.b-cdn.net/hbd_exvhac6ayb3ZKT/width:2048/plain/https://storage.googleapis.com/takeapp/media/cm08ogsho00030cl6fzpzcb12.jpg" alt="" />
+            <span>M : 60  L : 70</span>
+            <button onclick="addToCart('نجرسكو فراخ')">
+              اطلب الآن
+            </button>
+          </div>
+          <div class="item">
+            <h3>تشيكن ستربس</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_IxUC4gtUEn_oqxYwbXE6P1z3tw0UJhhAg&s" alt="" />
+            <span>M : 60  L : 70</span>
+            <button onclick="addToCart('تشيكن ستربس')">اطلب الآن</button>
+          </div>
+                    <div class="item">
+            <h3>سي فود</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwRSTnmTG6E0iwhKvmhKLrGYShdIWyNzJiQQ&s" alt="" />
+            <span>M : 70  L : 80</span>
+            <button onclick="addToCart('سي فود')">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>لحم مفروم</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9EQI9ijUJLxcZdpEJOxaZP7-wa-s7Um2_IQ&s" alt="" />
+            <span>M : 60  L : 70</span>
+            <button onclick="addToCart('لحم مفروم')">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>ميكس كريباوي</h3>
+            <img src="https://www.aljawharamag.com/aljawhara/uploads/2024/07/1711195074-5.jpg" alt="" />
+            <span>M : 65  L : 75</span>
+            <button onclick="addToCart('ميكس كريباوي')">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>لازانيا فراخ</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllGmNyqihaEJHw2JQf9UxaKzuEmBqHU5mag&s" alt="" />
+            <span>M : 60  L : 70</span>
+            <button onclick="addToCart('لازانيا فراخ')">اطلب الآن</button>
+          </div>
+          <div class="item">
+            <h3>لازانيا لحمة</h3>
+            <img src="https://img.youm7.com/ArticleImgs/2021/1/12/52661-%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D9%84%D8%A7%D8%B2%D8%A7%D9%86%D9%8A%D8%A7-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D8%AE-3.jpg" alt="" />
+            <span>M : 60  L : 70</span>
+            <button onclick="addToCart('لازانيا لحمة')">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 11- إضافات -->
+      <div class="menu-container">
+        <h1 id="Additions">إضافات</h1>
+                <br>
+
+        <div class="menu">
+          <div class="item">
+            <h3>باكيت بطاطس</h3>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlnJBBWt2e8MW7eYtzO-KHlYqZnbCisGHhnA&s" alt="" />
+          <span>S : 15 ,, L : 20 </span>
+            <button onclick="addToCart('باكيت بطاطس', 15 , 20 )">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>موتزاريلا</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThW5FgiL2RV65Bes8ps6OJQyHXGhOhyqSJBw&s" alt="" />
+          <span>10 جنيه</span>
+            <button onclick="addToCart('جبنة موتزاريلا', 10 , 15)">اطلب الآن</button>
+          </div>
+                    <div class="item">
+          <h3>لحم / دجاج</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4QMndSkr45K4dFWCZzQ2G1C6q7MWkVsgBEA&s" alt="" />
+          <span>S : 10 ,, L : 15</span>
+            <button onclick="addToCart('لحم / دجاج', 10 , 15)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>صوص شطة</h3>
+            <img src="https://i0.wp.com/abusamra.net/wp-content/uploads/2023/01/UOBb9595IhOQYED9KXmqyjiapIUi8WXAAsmwFu05.jpg?fit=480%2C480&ssl=1" alt="" />
+          <span>10 جنيه</span>
+            <button onclick="addToCart('صوص شطة', 10)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>صوص رانش</h3>
+            <img src="https://talabat.dhmedia.io/image/product-information-management/68710d088b6ae261425e1487.jpg?size=520" alt="" />
+            <span>10 جنيه</span>
+            <button onclick="addToCart('صوص رانش', 10)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>كونو</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuJWYGOpWsPW1QlFpnZFpkrFVOBxiO_Fqv0A&s" alt="" />
+          <span>S : 10 ,, L : 15</span>
+            <button onclick="addToCart('كونو', 10 , 15)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>كول سلو</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ8lkoxpf4ahWbLPW1spdCsttEJgYSJ3x-Og&s" alt="" />
+          <span>15 جنيه</span>
+            <button onclick="addToCart('كول سلو', 15)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>كانز</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZp18vsxy7LfrAFjkN7iuOpRLWjoAmo05X8Q&s" alt="" />
+          <span>20 جنيه</span>
+            <button onclick="addToCart('كانز', 20)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>1 لتر بيبسي</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9gKXyKnl_NUx-vZTdzx-4Orx48xuoYNncsA&s" alt="" />
+          <span>40 جنيه</span>
+            <button onclick="addToCart('لتر بيبسي 1', 40)">اطلب الآن</button>
+          </div>
+          <div class="item">
+          <h3>2 لتر بيبسي </h3>
+            <img src="https://www.qebox.app/qebox/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-16-at-5.42.29-AM.jpeg" alt="" />
+          <span>45 جنيه</span>
+            <button onclick="addToCart('2لتر بيبسي', 45)">اطلب الآن</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="store" class="cartBox sectionReveal">
+      <h2>🛒 سلة الطلبات</h2>
+      <div id="cartItems"></div>
+      <h3 id="totalPrice">الإجمالي: 0 جنيه</h3>
+
+      <input id="customerName" placeholder="اسم العميل" />
+      <input id="customerPhone" placeholder="رقم الهاتف" />
+      <input id="customerAddress" placeholder="العنوان" />
+
+      <select id="deliveryType">
+        <option value="استلام من الفرع">استلام من الفرع</option>
+        <option value="توصيل للمنزل">توصيل للمنزل</option>
+      </select>
+
+      <button onclick="checkout()">تأكيد الطلب</button>
+    </section>
+
+    <!-- Invoice Section -->
+    <section id="invoice" class="hidden sectionReveal">
+      <h2>🧾 الفاتورة</h2>
+      <table id="invoiceTable"></table>
+      <div id="qrcode"></div>
+      <button onclick="window.print()">🖨️ طباعة</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="dark sectionReveal">
+      <h2>تواصل معنا</h2>
+      <div class="socials">
+        <a href="https://wa.me/+0201090968387" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt=""
+        />
+        </a>
+        <a href="https://www.facebook.com/groups/886548616010613?locale=ar_AR" target="_blank">              <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt=""
+        />
+   
+</a>
+
+      </div>
+      <p>📞 01090968387</p>
+      <br>
+      <p>📞 01001323357</p>
+      <h2>العنوان</h2>
+      <p>
+        📍 مصر : الغربية - مركز السنطة - الجعفرية
+      </p>
+      <br>
+      <p>📍 الجعفرية : بجوار
+        الجمعية الخيرية بتطاي</p>
+        <br>
+        <br>
+        <a href="https://www.google.com/maps/@30.6950392,31.102246,17z?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+      <img class="img12" src="./map.png" alt="" />
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      Youssef Bar © 2026 Crepawy – All Rights Reserved
+      <p>Made by <a href="https://youssefmohamedbar.github.io/Youssef-Bar-Creative-Developer/"  target="_blank">Youssef Bar</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

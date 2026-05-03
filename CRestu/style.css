@@ -1,0 +1,311 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Colors */
+:root {
+  --primary: #ffd700; /* أصفر */
+  --secondary: #000; /* أسود */
+  --accent: #ff4500; /* أحمر نار */
+}
+
+/* Body & Smooth Scroll */
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: var(--primary);
+  text-shadow: 2px 2px var(--accent);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.button2 {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  background: var(--accent);
+  color: var(--primary);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.button2:hover {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* Navigation */
+.nav1 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--secondary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.nav1 a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.nav1 a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* Sections */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dark {
+  background: #111;
+  color: var(--primary);
+}
+
+section h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px var(--accent);
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Menu */
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.menu-nav a {
+  padding: 0.5rem 1rem;
+  background: var(--secondary);
+  color: var(--primary);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menu-nav a:hover {
+  background: var(--accent);
+  color: var(--secondary);
+}
+
+/* Menu Items */
+.menu-container {
+  margin-bottom: 4rem;
+  text-align: center;
+  
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.menu .item {
+  background: #111;
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.menu .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+.menu .item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.img12{
+display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center;       /* توسيط رأسي */
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+}
+
+.menu .item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu .item span {
+  font-weight: bold;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.menu .item button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--accent);
+  color: var(--primary);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.menu .item button:hover {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: scale(1.1);
+}
+
+/* Cart */
+.cartBox {
+  background: #222;
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.cartBox input,
+.cartBox select {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+}
+
+.cartBox button {
+  background: var(--accent);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.cartBox button:hover {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+/* Invoice */
+.hidden {
+  display: none;
+}
+#invoice table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+#invoice table,
+#invoice th,
+#invoice td {
+  border: 1px solid var(--primary);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Contact Section */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.socials img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid var(--accent);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 174, 0);
+}
